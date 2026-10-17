@@ -160,25 +160,31 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section> */}
 
-      {/* Solutions preview */}
-      <section className="border-t border-grey-200 bg-grey-50">
-        <div className="container py-16 md:py-20">
-          <h2 className="mb-4 text-h2">{t('solutionsTitle')}</h2>
-          <p className="mb-10 max-w-2xl text-body text-grey">{t('solutionsSubtitle')}</p>
-          <div className="grid gap-4 md:grid-cols-2">
-            {solutions.map((solution) => (
+      {/* Three institutional areas from the Website Update Brief */}
+      <section className="airi-editorial border-t border-grey-200 bg-grey-50">
+        <div className="container py-16 md:py-24">
+          <div className="mb-10 max-w-3xl">
+            <span className="airi-kicker">{t('areasEyebrow')}</span>
+            <h2 className="mb-4 mt-4 text-h2">{t('solutionsTitle')}</h2>
+            <p className="text-body text-grey">{t('solutionsSubtitle')}</p>
+          </div>
+          <div className="grid grid-cols-1 items-stretch gap-6 lg:grid-cols-3">
+            {solutions.map((solution, index) => (
               <Link
-                key={solution.title}
+                key={solution.href}
                 href={solution.href}
-                className="group flex flex-col justify-between border border-grey-200 bg-white p-8 transition-colors hover:border-primary/30"
+                className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-primary/10 bg-white p-7 shadow-md shadow-primary/5 transition-all duration-300 hover:-translate-y-1 hover:border-lime hover:shadow-xl hover:shadow-primary/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary md:p-9"
               >
-                <div>
-                  <h3 className="mb-3 text-h4 group-hover:text-primary">{solution.title}</h3>
-                  <p className="text-sm text-grey">{solution.description}</p>
+                <div className={index === 1 ? 'absolute inset-x-0 top-0 h-1.5 bg-primary' : index === 2 ? 'absolute inset-x-0 top-0 h-1.5 bg-lime' : 'absolute inset-x-0 top-0 h-1.5 bg-primary-300'} />
+                <div className="mb-8 flex items-center justify-between">
+                  <span className="airi-icon-number">{String(index + 1).padStart(2, '0')}</span>
+                  <ArrowRight className="h-5 w-5 text-primary transition-transform group-hover:translate-x-1" aria-hidden="true" />
                 </div>
-                <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary">
-                  {t('learnMore')}
-                  <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <h3 className="mb-4 text-h3 text-foreground transition-colors group-hover:text-primary">{solution.title}</h3>
+                <p className="mb-9 flex-1 text-sm leading-7 text-grey">{solution.description}</p>
+                <span className="inline-flex items-center gap-2 self-start border-b-2 border-lime pb-1 text-sm font-bold text-primary transition-all group-hover:gap-3">
+                  {t(index === 0 ? 'exploreResearch' : index === 1 ? 'exploreImplementation' : 'exploreCommunity')}
+                  <ChevronRight className="h-4 w-4" aria-hidden="true" />
                 </span>
               </Link>
             ))}

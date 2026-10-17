@@ -73,7 +73,11 @@
     "ctaTeamText": "Our team is building Canada's AI-literate future.",
     "ctaMeetLeadership": "Meet our leadership",
     "communityLink": "Explore Community Services",
-    "finalNarrative": "Advancing AI literacy and responsible adoption through evidence-informed programs and technical implementation guided by community needs."
+    "finalNarrative": "Advancing AI literacy and responsible adoption through evidence-informed programs and technical implementation guided by community needs.",
+    "areasEyebrow": "AIRI Foundation",
+    "exploreResearch": "Explore Research",
+    "exploreImplementation": "Explore Technical Implementation",
+    "exploreCommunity": "Explore Community Services"
   },
   "impact": {
     "joinTitle": "Join AIRI and help us make a bigger impact",
