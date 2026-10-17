@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'AIRI Foundation',
   description:
-    'Because AI impacts everyone, everyone deserves to understand and use it better.',
+    'Advancing responsible AI through research and technical implementation.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://airifoundation.org',
   ogImage: '/og-image.png',
   links: {

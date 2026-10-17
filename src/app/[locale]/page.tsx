@@ -58,8 +58,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     : fallbackNews;
 
   const heroCards = [
-    { text: t('heroCard1'), href: '/programs#operational' },
-    { text: t('heroCard2'), href: '/programs#civic' },
+    { text: t('heroCard1'), href: '/research' },
+    { text: t('heroCard2'), href: '/contact' },
   ];
 
   const programs = [
@@ -76,9 +76,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   ];
 
   const solutions = [
-    { title: t('solution1Title'), description: t('solution1Desc'), href: '/programs#operational' },
-    { title: t('solution2Title'), description: t('solution2Desc'), href: '/programs#civic' },
-    // { title: t('solution3Title'), description: t('solution3Desc'), href: '/solutions#research' },
+    { title: t('solution1Title'), description: t('solution1Desc'), href: '/research' },
+    { title: t('solution2Title'), description: t('solution2Desc'), href: '/technical-implementation' },
+    { title: t('solution3Title'), description: t('solution3Desc'), href: '/community-services' },
   ];
 
   return (
@@ -118,8 +118,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             ))}
           </div>
           <p className="mt-8 max-w-2xl text-body-lg leading-relaxed text-white/70">
-            {t('heroTagline')} <span style={{ fontWeight: 'bold' }}>you deserve to understand and use it well. </span>
+            {t('heroTagline')}
           </p>
+          <Link href="/community-services" className="mt-5 inline-flex font-semibold text-white underline underline-offset-4">{t('communityLink')}</Link>
         </div>
       </section>
 
@@ -138,7 +139,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
       {/* Two-column programs */}
       {/* <section className="border-t border-grey-200">
-        <div className="container grid md:grid-cols-2">
+        <div className="container grid md:grid-cols-3">
           {programs.map((program) => (
             <div
               key={program.title}

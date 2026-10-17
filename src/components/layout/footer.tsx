@@ -116,7 +116,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-3 text-sm font-semibold text-foreground">Programs</h3>
+            <h3 className="mb-3 text-sm font-semibold text-foreground">{tNav("communityServices")}</h3>
             <ul className="space-y-2">
               {footerNav.programs.map((link) => (
                 <li key={link.href}>

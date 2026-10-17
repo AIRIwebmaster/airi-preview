@@ -9,7 +9,7 @@ import { LeadershipGrid } from '@/components/sections/leadership-grid';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: "Learn about AIRI Foundation's mission to democratize AI education across Canada.",
+  description: "Learn about AIRI Foundation's mission to AI research, technical implementation and community services.",
 };
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -44,6 +44,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         breadcrumbs={[{ label: t('breadcrumbHome'), href: '/' }, { label: t('breadcrumbAbout') }]}
       />
 
+      <section className="container py-12 md:py-16"><p className="max-w-4xl text-body-lg leading-relaxed text-grey">{t('introText')}</p></section>
       {/* Mission & Vision */}
       <section className="border-t border-grey-200">
         <div className="container grid md:grid-cols-2">
@@ -86,7 +87,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
 
       {/* Team */}
-      <section id="leadership" className="scroll-mt-20 container py-16 md:py-24">
+      <section className="scroll-mt-20 container py-16 md:py-24">
         <h2 className="mb-4 text-h2">{t('boardTitle')}</h2>
         {/* <p className="mb-10 text-body text-grey">{t('leadershipSubtitle')}</p> */}
         <TeamGrid />
@@ -94,7 +95,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
 
 
       {/* Interns */}
-      <section id="leadership" className="scroll-mt-20 container py-16 md:py-24">
+      <section className="scroll-mt-20 container py-16 md:py-24">
         <h2 className="mb-4 text-h2">{t('internTitle')}</h2>
         <p className="mb-10 text-body text-grey">{t('internSubtitle')}</p>
         {/* <TeamGrid /> */}
@@ -131,7 +132,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           </p> */}
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/programs"
+              href="/community-services"
               className="bg-white px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-white/90"
             >
               {t('ctaPrograms')}
