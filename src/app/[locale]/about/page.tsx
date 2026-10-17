@@ -64,7 +64,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
 
-      <section className="border-t border-grey-200"><div className="container py-16 md:py-20"><h2 className="mb-8 text-h2">{tp('title')}</h2><div className="grid gap-6 md:grid-cols-3">{(['literacy','adoption','implementation'] as const).map(key=><article key={key} className="border border-grey-200 p-6"><h3 className="mb-3 text-h4">{tp(key)}</h3><p className="text-sm leading-relaxed text-grey">{tp(`${key}Text`)}</p></article>)}</div></div></section>
+      <section className="border-t border-grey-200"><div className="container py-16 md:py-20"><h2 className="mb-8 text-h2">{tp('title')}</h2><div className="grid gap-6 md:grid-cols-3">{(['literacy','adoption','implementation'] as const).map(key=><article key={key} className="flex h-full flex-col rounded-2xl border border-grey-200 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl"><h3 className="mb-3 text-h4">{tp(key)}</h3><p className="mb-6 text-sm leading-relaxed text-grey">{tp(`${key}Text`)}</p><Link href={key==='literacy'?'/ai-literacy':key==='adoption'?'/responsible-adoption':'/technical-implementation'} className="mt-auto inline-flex items-center gap-2 font-semibold text-primary underline underline-offset-4">{locale==='fr'?'Découvrir ce domaine':'Explore this area'} <span aria-hidden="true">→</span></Link></article>)}</div></div></section>
       {/* Values */}
       <section className="bg-grey-50">
         <div className="container py-16 md:py-24">
