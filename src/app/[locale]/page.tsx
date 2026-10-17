@@ -109,7 +109,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               <Link
                 key={card.href}
                 href={card.href}
-                className="group flex items-center justify-between gap-4 border border-white/25 bg-white/10 px-6 py-5 backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/15 sm:max-w-sm"
+                className="group flex items-center justify-between gap-4 rounded-xl border border-white/25 bg-white/10 px-6 py-5 shadow-lg backdrop-blur-sm transition-all hover:-translate-y-1 hover:border-lime hover:bg-white/20 sm:max-w-sm"
               >
                 <span className="text-[15px] font-medium leading-snug text-white">{card.text}</span>
                 <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 border-white/40 transition-colors group-hover:border-white group-hover:bg-white/10">
@@ -121,7 +121,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <p className="mt-8 max-w-2xl text-body-lg leading-relaxed text-white/70">
             {t('heroTagline')}
           </p>
-          <Link href="/community-services" className="mt-5 inline-flex font-semibold text-white underline underline-offset-4">{t('communityLink')}</Link>
+          <Link href="/community-services" className="mt-5 inline-flex items-center rounded-lg border border-lime px-5 py-3 font-bold text-lime transition-colors hover:bg-lime hover:text-foreground">{t('communityLink')}</Link>
         </div>
       </section>
 
@@ -139,7 +139,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </section>
 
       {/* Two-column programs */}
-      {/* <section className="border-t border-grey-200">
+      {/* <section className="airi-editorial border-t border-grey-200">
         <div className="container grid md:grid-cols-3">
           {programs.map((program) => (
             <div
@@ -187,7 +187,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
       </section>
 
       {/* Final Public Positioning: three activities, not three organisational departments */}
-      <section className="border-t border-grey-200"><div className="container py-16 md:py-20"><h2 className="mb-8 text-h2">{tp('title')}</h2><p className="mb-10 max-w-3xl text-body text-grey">{t('finalNarrative')}</p><div className="grid gap-6 md:grid-cols-3">{(['literacy','adoption','implementation'] as const).map(key=><article key={key} className="border border-grey-200 bg-white p-7"><h3 className="mb-4 text-h4">{tp(key)}</h3><p className="text-sm leading-relaxed text-grey">{tp(`${key}Text`)}</p><Link href={key==='literacy'?'/community-services':key==='adoption'?'/research':'/technical-implementation'} className="mt-5 inline-flex font-semibold text-primary hover:underline">{key==='literacy'?tp('learn'):key==='adoption'?t('heroCard1'):tp('apply')}</Link></article>)}</div></div></section>
+      <section className="border-t border-grey-200"><div className="container py-16 md:py-20"><h2 className="mb-8 text-h2">{tp('title')}</h2><p className="mb-10 max-w-3xl text-body text-grey">{t('finalNarrative')}</p><div className="grid gap-6 md:grid-cols-3">{(['literacy','adoption','implementation'] as const).map(key=><article key={key} className="airi-panel"><h3 className="mb-4 text-h4">{tp(key)}</h3><p className="text-sm leading-relaxed text-grey">{tp(`${key}Text`)}</p><Link href={key==='literacy'?'/community-services':key==='adoption'?'/research':'/technical-implementation'} className="mt-5 inline-flex font-semibold text-primary hover:underline">{key==='literacy'?tp('learn'):key==='adoption'?t('heroCard1'):tp('apply')}</Link></article>)}</div></div></section>
       {/* Partners */}
       <section className="border-b border-grey-200">
         <div className="container py-16 md:py-20">
