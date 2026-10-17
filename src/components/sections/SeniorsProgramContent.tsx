@@ -45,20 +45,20 @@ export async function SeniorsProgramContent({
           title={t('heroTitle')}
           subtitle={t('heroSubtitle')}
           breadcrumbs={[
-            { label: t('breadcrumbPrograms'), href: '/programs' },
+            { label: t('breadcrumbPrograms'), href: '/community-services' },
             { label: t('breadcrumbSeniors') },
           ]}
         />
       )}
 
-      <section className="bg-grey-50">
+      <section className="airi-editorial bg-grey-50">
         <div className="container py-16 md:py-24">
           <h2 className="mb-4 text-h2">{t('learnTitle')}</h2>
 
-          <div className="grid gap-px border border-grey-200 bg-grey-200 sm:grid-cols-3">
-            {topics.map((topic) => (
-              <div key={topic.title} className="bg-white p-8 md:p-10">
-                <h3 className="mb-3 text-h4">{topic.title}</h3>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {topics.map((topic, index) => (
+              <div key={topic.title} className="airi-panel">
+                <span className="airi-icon-number mb-6">{String(index + 1).padStart(2, '0')}</span><h3 className="mb-3 text-h4">{topic.title}</h3>
                 <p className="text-sm leading-relaxed text-grey">
                   {topic.description}
                 </p>
@@ -66,34 +66,34 @@ export async function SeniorsProgramContent({
             ))}
           </div>
 
-          <br />
+          <div className="mt-12 rounded-2xl border border-primary/15 bg-white p-7 shadow-sm md:p-10">
 
-          <h2 className="mb-4 text-h2 text-dark">
-            See our Seniors program brochure
-          </h2>
+          <p className="airi-kicker mb-3">{t('heroTitle')}</p><h2 className="mb-6 text-h3">{t('learnTitle')}</h2>
 
           <Link
             href="https://drive.google.com/file/d/1uAru5zaJOybWDsgYsSSFnBU-fLRpWc8Y/view?usp=sharing"
-            className="bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-dark/90"
+            className="airi-action"
           >
-            Preview
+            {t('heroTitle')} — PDF ↗
           </Link>
+          </div>
         </div>
       </section>
 
-      <section className="bg-primary">
+      <section className="bg-white">
         <div className="container py-16 md:py-20">
-          <h2 className="mb-4 text-h2 text-white">{t('ctaTitle')}</h2>
-          <p className="mb-8 max-w-xl text-body text-white/80">
+          <div className="airi-feature-band p-8 md:p-14"><h2 className="mb-4 text-h2 text-white">{t('ctaTitle')}</h2>
+          <p className="mb-8 max-w-xl text-body text-white/85">
             {t('ctaText')}
           </p>
 
           <Link
             href="/contact"
-            className="bg-white px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-white/90"
+            className="inline-flex rounded-lg bg-lime px-7 py-3 text-sm font-bold text-foreground transition-colors hover:bg-white"
           >
-            {t('ctaButton')}
+            {t('ctaButton')} →
           </Link>
+          </div>
         </div>
       </section>
     </>

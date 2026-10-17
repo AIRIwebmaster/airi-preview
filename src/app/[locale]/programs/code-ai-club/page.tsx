@@ -46,16 +46,16 @@ export default async function CodeAIClubPage({ params }: { params: Promise<{ loc
       <PageHero
         title={t('heroTitle')}
         subtitle={t('heroSubtitle')}
-        breadcrumbs={[{ label: t('breadcrumbPrograms'), href: '/programs' }, { label: t('breadcrumbClub') }]}
+        breadcrumbs={[{ label: t('breadcrumbPrograms'), href: '/community-services' }, { label: t('breadcrumbClub') }]}
       />
 
       {/* Program details */}
-      <section className="border-t border-grey-200">
+      <section className="airi-editorial border-t border-grey-200">
         <div className="container py-16 md:py-24">
           <h2 className="mb-10 text-h2">{t('detailsTitle')}</h2>
-          <div className="grid gap-px border border-grey-200 bg-grey-200 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {details.map((detail) => (
-              <div key={detail.label} className="bg-white p-6 md:p-8">
+              <div key={detail.label} className="airi-panel">
                 <p className="mb-1 text-sm font-medium text-primary">{detail.label}</p>
                 <p className="text-body text-grey">{detail.value}</p>
               </div>
@@ -68,10 +68,10 @@ export default async function CodeAIClubPage({ params }: { params: Promise<{ loc
       <section className="border-t border-grey-200">
         <div className="container py-16 md:py-24">
           <h2 className="mb-10 text-h2">{t('learnTitle')}</h2>
-          <ul className="max-w-2xl space-y-4">
-            {learnings.map((item) => (
-              <li key={item} className="flex gap-3 text-body text-grey">
-                <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+          <ul className="grid gap-4 md:grid-cols-2">
+            {learnings.map((item, index) => (
+              <li key={item} className="airi-panel flex items-start gap-4 text-body text-grey">
+                <span className="airi-icon-number shrink-0">{String(index + 1).padStart(2, '0')}</span>
                 {item}
               </li>
             ))}
@@ -80,10 +80,10 @@ export default async function CodeAIClubPage({ params }: { params: Promise<{ loc
       </section>
 
       {/* Key features */}
-      <section className="bg-grey-50">
+      <section className="airi-editorial bg-grey-50">
         <div className="container py-16 md:py-24">
           <h2 className="mb-10 text-h2">{t('featuresTitle')}</h2>
-          <ul className="max-w-2xl space-y-4">
+          <ul className="grid gap-4 md:grid-cols-2">
             {features.map((item) => (
               <li key={item} className="flex gap-3 text-body text-grey">
                 <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
@@ -95,25 +95,26 @@ export default async function CodeAIClubPage({ params }: { params: Promise<{ loc
       </section>
 
       {/* CTA */}
-      <section className="bg-primary">
+      <section className="bg-white">
         <div className="container py-16 md:py-20">
-          <h2 className="mb-4 text-h2 text-white">{t('ctaTitle')}</h2>
+          <div className="airi-feature-band p-8 md:p-14"><h2 className="mb-4 text-h2 text-white">{t('ctaTitle')}</h2>
           <p className="mb-8 max-w-xl text-body text-white/80">
             {t('ctaText')}
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
               href="/register-codeaiclub"
-              className="bg-white px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-white/90"
+              className="inline-flex rounded-lg bg-lime px-7 py-3 text-sm font-bold text-foreground hover:bg-white"
             >
               {t('ctaRegister')}
             </Link>
             <a
               href="mailto:codeclub@airifoundation.org"
-              className="border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+              className="inline-flex rounded-lg border border-white/50 px-7 py-3 text-sm font-semibold text-white hover:bg-white/10"
             >
               {t('ctaContact')}
             </a>
+          </div>
           </div>
         </div>
       </section>
