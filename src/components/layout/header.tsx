@@ -61,21 +61,21 @@ export function Header() {
         scrolled ? 'border-grey-200 bg-white' : 'border-grey-100 bg-white'
       )}
     >
-      <div className="container flex h-[72px] items-center gap-6 lg:gap-10">
+      <div className="mx-auto flex h-[72px] w-full max-w-[1660px] items-center gap-4 px-4 sm:px-6 2xl:gap-5 2xl:px-8">
         <Link href="/" className="flex-shrink-0" aria-label="AIRI Foundation Home">
           <Image
             src="/images/logo.png"
             alt="AIRI Foundation"
-            width={130}
+            width={118}
             height={44}
-            className="h-9 w-auto sm:h-10 lg:h-11"
+            className="h-9 w-auto 2xl:h-10"
             priority
           />
         </Link>
 
-        <nav className="ml-auto hidden items-center gap-7 xl:gap-9 lg:flex" aria-label="Main navigation">
+        <nav className="ml-auto hidden min-w-0 items-center gap-3 2xl:flex 2xl:gap-4" aria-label="Main navigation">
           {mainNav.map((item) => (
-            <div key={item.key} className="relative">
+            <div key={item.key} className="relative flex-shrink-0 whitespace-nowrap">
               {item.children ? (
                 <div
                   onMouseEnter={() => openDropdown(item.key)}
@@ -83,7 +83,7 @@ export function Header() {
                 >
                   <button
                     className={cn(
-                      'flex items-center gap-1.5 text-[15px] font-medium transition-colors',
+                      'flex items-center gap-1 whitespace-nowrap text-[13px] font-medium transition-colors',
                       activeDropdown === item.key ? 'text-primary' : 'text-foreground hover:text-primary'
                     )}
                     aria-expanded={activeDropdown === item.key}
@@ -164,7 +164,7 @@ export function Header() {
               ) : (
                 <Link
                   href={item.href}
-                  className="text-[15px] font-medium text-foreground transition-colors hover:text-primary"
+                  className="whitespace-nowrap text-[13px] font-medium text-foreground transition-colors hover:text-primary"
                 >
                   {t(item.key)}
                 </Link>
@@ -173,8 +173,8 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="ml-auto flex items-center gap-3 sm:gap-4 lg:ml-0 lg:gap-5">
-          <div className="hidden items-center gap-1 lg:flex">
+        <div className="ml-auto flex shrink-0 items-center gap-2 sm:gap-3 2xl:ml-0 2xl:gap-3">
+          <div className="hidden items-center gap-1 2xl:flex">
             <button
               onClick={() => switchLocale('en')}
               className={cn(
@@ -198,13 +198,13 @@ export function Header() {
 
           <Link
             href={siteConfig.links.donate}
-            className="hidden bg-lime px-6 py-2 text-[14px] font-bold text-lime-foreground transition-all hover:bg-transparent hover:outline hover:outline-2 hover:outline-lime lg:inline-block"
+            className="hidden whitespace-nowrap bg-lime px-4 py-2 text-[13px] font-bold text-lime-foreground transition-all hover:bg-transparent hover:outline hover:outline-2 hover:outline-lime 2xl:inline-block"
           >
             {t('support')}
           </Link>
 
           {!mobileOpen && (
-            <div className="flex items-center gap-1 lg:hidden">
+            <div className="flex items-center gap-1 2xl:hidden">
               <button
                 onClick={() => switchLocale('en')}
                 className={cn(
@@ -228,7 +228,7 @@ export function Header() {
           )}
 
           <button
-            className="flex items-center gap-2 rounded-full bg-accent-50 px-4 py-2 transition-colors hover:bg-accent-100 lg:hidden"
+            className="flex items-center gap-2 rounded-full bg-accent-50 px-4 py-2 transition-colors hover:bg-accent-100 2xl:hidden"
             onClick={() => { setMobileOpen(!mobileOpen); setActiveDropdown(null); setActiveMobileSubDropdown(null); }}
             aria-label={mobileOpen ? t('close') : t('menu')}
           >
@@ -250,7 +250,7 @@ export function Header() {
 
       <div
         className={cn(
-          'fixed inset-x-0 top-[72px] bottom-0 z-50 overflow-y-auto bg-white transition-all duration-300 ease-out-expo lg:pointer-events-none lg:hidden',
+          'fixed inset-x-0 top-[72px] bottom-0 z-50 overflow-y-auto bg-white transition-all duration-300 ease-out-expo 2xl:pointer-events-none 2xl:hidden',
           mobileOpen
             ? 'visible translate-y-0 opacity-100 pointer-events-auto'
             : 'invisible -translate-y-4 opacity-0 pointer-events-none'
