@@ -16,6 +16,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('about');
+  const tp = await getTranslations('positioning');
 
   const values = [
     {
@@ -63,6 +64,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
 
+      <section className="border-t border-grey-200"><div className="container py-16 md:py-20"><h2 className="mb-8 text-h2">{tp('title')}</h2><div className="grid gap-6 md:grid-cols-3">{(['literacy','adoption','implementation'] as const).map(key=><article key={key} className="border border-grey-200 p-6"><h3 className="mb-3 text-h4">{tp(key)}</h3><p className="text-sm leading-relaxed text-grey">{tp(`${key}Text`)}</p></article>)}</div></div></section>
       {/* Values */}
       <section className="bg-grey-50">
         <div className="container py-16 md:py-24">

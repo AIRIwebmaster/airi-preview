@@ -72,7 +72,8 @@
     "ctaApply": "Apply",
     "ctaTeamText": "Our team is building Canada's AI-literate future.",
     "ctaMeetLeadership": "Meet our leadership",
-    "communityLink": "Explore Community Services"
+    "communityLink": "Explore Community Services",
+    "finalNarrative": "Advancing AI literacy and responsible adoption through evidence-informed programs and technical implementation guided by community needs."
   },
   "impact": {
     "joinTitle": "Join AIRI and help us make a bigger impact",
@@ -90,13 +91,13 @@
   },
   "about": {
     "heroTitle": "About AIRI Foundation",
-    "heroSubtitle": "Because AI impacts everyone, they deserve to understand and use it well",
+    "heroSubtitle": "Advancing AI literacy and responsible adoption through evidence-informed programs and technical implementation guided by community needs.",
     "breadcrumbHome": "Home",
     "breadcrumbAbout": "About",
     "missionTitle": "Our Mission",
-    "missionText": "AIRI Foundation advances responsible AI through research and technical implementation. We produce evidence to help organizations and communities understand AI, and we turn that knowledge into practical systems that address real needs.",
+    "missionText": "To equip communities and organizations with the knowledge, evidence, and AI solutions they need to understand, adopt, and use AI responsibly.",
     "visionTitle": "Our Vision",
-    "visionText": "A world where people and organizations can access, shape, and benefit from artificial intelligence in ways that advance human wellbeing and a more just society.",
+    "visionText": "A Canada where everyone can understand, shape, and benefit from AI in ways that support a just and inclusive society.",
     "whyTitle": "Why AIRI?",
     "whySubtitle": "What sets us apart in the AI education space",
     "value1Title": "Research Practice",
@@ -559,5 +560,16 @@
     "backToTop": "Scroll to top",
     "skipToContent": "Skip to main content",
     "loading": "Loading..."
+  },
+  "positioning": {
+    "title": "Our Approach",
+    "literacy": "AI Literacy",
+    "literacyText": "AIRI makes AI understandable through accessible learning grounded in everyday life. Guided activities help participants understand AI, question its outputs, recognize errors and bias, and explore its effects on work, learning and information.",
+    "adoption": "Responsible Adoption",
+    "adoptionText": "We help individuals, businesses and organizations assess readiness, choose appropriate AI tools with accessibility, privacy and cost in mind, establish safeguards and human oversight, and use AI safely and effectively.",
+    "implementation": "Technical Implementation",
+    "implementationText": "We work with communities and organizations to understand the needs of the people who will use a solution, develop custom AI tools, integrate them into existing workflows, and put privacy, accountability and inclusive design at the centre.",
+    "learn": "Explore Community Services",
+    "apply": "Work With AIRI"
   }
 }

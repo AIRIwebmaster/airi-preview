@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'AIRI Foundation',
   description:
-    'Advancing responsible AI through research and technical implementation.',
+    'Advancing AI literacy and responsible adoption through evidence-informed programs and technical implementation guided by community needs.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://airifoundation.org',
   ogImage: '/og-image.png',
   links: {

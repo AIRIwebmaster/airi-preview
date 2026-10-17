@@ -39,6 +39,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('home');
+  const tp = await getTranslations('positioning');
   const dbStats = await getImpactStats();
   const dbInsights = await getVisibleInsights();
 
@@ -91,7 +92,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             {/* <h1 className="text-[clamp(2rem,6vw+1rem,5rem)] font-bold leading-[1.02] text-white">
               {t('heroTitle')}
             </h1> */}
-            <h2 className="text-[clamp(2rem,6vw+1rem,5rem)] font-bold leading-[1.02] text-white">
+            <h1 className="text-[clamp(2rem,6vw+1rem,5rem)] font-bold leading-[1.02] text-white">
               <RichTypewriter
                 text={t('heroTitle')}
                 //   italicTexts={[
@@ -101,7 +102,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 // ]}
                 speed={35}
               />
-            </h2>
+            </h1>
           </div>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             {heroCards.map((card) => (
@@ -185,6 +186,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
+      {/* Final Public Positioning: three activities, not three organisational departments */}
+      <section className="border-t border-grey-200"><div className="container py-16 md:py-20"><h2 className="mb-8 text-h2">{tp('title')}</h2><p className="mb-10 max-w-3xl text-body text-grey">{t('finalNarrative')}</p><div className="grid gap-6 md:grid-cols-3">{(['literacy','adoption','implementation'] as const).map(key=><article key={key} className="border border-grey-200 bg-white p-7"><h3 className="mb-4 text-h4">{tp(key)}</h3><p className="text-sm leading-relaxed text-grey">{tp(`${key}Text`)}</p><Link href={key==='literacy'?'/community-services':key==='adoption'?'/research':'/technical-implementation'} className="mt-5 inline-flex font-semibold text-primary hover:underline">{key==='literacy'?tp('learn'):key==='adoption'?t('heroCard1'):tp('apply')}</Link></article>)}</div></div></section>
       {/* Partners */}
       <section className="border-b border-grey-200">
         <div className="container py-16 md:py-20">

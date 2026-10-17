@@ -71,7 +71,8 @@
     "ctaApply": "Postuler",
     "ctaTeamText": "Notre équipe bâtit l'avenir de la littératie en IA au Canada.",
     "ctaMeetLeadership": "Rencontrer notre direction",
-    "communityLink": "Découvrir les services communautaires"
+    "communityLink": "Découvrir les services communautaires",
+    "finalNarrative": "Faire progresser la littératie en IA et son adoption responsable grâce à des programmes fondés sur des données probantes et à une mise en œuvre technique guidée par les besoins des communautés."
   },
   "impact": {
     "joinTitle": "Joignez-vous à AIRI et aidez-nous à faire une plus grande différence",
@@ -89,13 +90,13 @@
   },
   "about": {
     "heroTitle": "À propos de la Fondation AIRI",
-    "heroSubtitle": "Parce que l'IA touche tout le monde, chacun mérite de mieux la comprendre et l'utiliser. Nous rendons la formation en IA accessible, compréhensible et concrète pour toutes les communautés au Canada.",
+    "heroSubtitle": "Faire progresser la littératie en IA et son adoption responsable grâce à des programmes fondés sur des données probantes et à une mise en œuvre technique guidée par les besoins des communautés.",
     "breadcrumbHome": "Accueil",
     "breadcrumbAbout": "À propos",
     "missionTitle": "Notre mission",
-    "missionText": "La Fondation AIRI fait progresser l’IA responsable grâce à la recherche et à la mise en œuvre technique. Nous produisons des données probantes pour aider les organisations et les communautés à comprendre l’IA, puis transformons ces connaissances en systèmes pratiques répondant à des besoins réels.",
+    "missionText": "Doter les communautés et les organisations des connaissances, des données probantes et des solutions d’IA nécessaires pour comprendre, adopter et utiliser l’IA de manière responsable.",
     "visionTitle": "Notre vision",
-    "visionText": "Un monde où les personnes et les organisations peuvent accéder à l’intelligence artificielle, la façonner et en bénéficier pour favoriser le bien-être humain et une société plus juste.",
+    "visionText": "Un Canada où chacune et chacun peut comprendre, façonner et tirer parti de l’IA dans une société juste et inclusive.",
     "whyTitle": "Pourquoi AIRI?",
     "whySubtitle": "Ce qui nous distingue dans le domaine de la formation en IA",
     "value1Title": "Recherche fondée sur des données probantes",
@@ -537,5 +538,16 @@
     "backToTop": "Retour en haut",
     "skipToContent": "Passer au contenu principal",
     "loading": "Chargement..."
+  },
+  "positioning": {
+    "title": "Notre approche",
+    "literacy": "Littératie en IA",
+    "literacyText": "AIRI rend l’IA compréhensible grâce à un apprentissage accessible et ancré dans la vie quotidienne. Des activités guidées permettent de comprendre l’IA, de questionner ses résultats, de reconnaître les erreurs et les biais et d’explorer ses effets sur le travail, l’apprentissage et l’information.",
+    "adoption": "Adoption responsable",
+    "adoptionText": "Nous aidons les personnes, les entreprises et les organisations à évaluer leur préparation, à choisir des outils appropriés selon l’accessibilité, la confidentialité et les coûts, à mettre en place des protections et une supervision humaine, et à utiliser l’IA de manière sûre et efficace.",
+    "implementation": "Mise en œuvre technique",
+    "implementationText": "Nous travaillons avec les communautés et les organisations pour comprendre les besoins des utilisateurs, développer des outils d’IA sur mesure, les intégrer aux processus existants et placer la confidentialité, la responsabilité et la conception inclusive au cœur des solutions.",
+    "learn": "Explorer les services communautaires",
+    "apply": "Collaborer avec AIRI"
   }
 }
