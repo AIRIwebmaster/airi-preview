@@ -11,6 +11,18 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() { return [
+    {source:'/programs',destination:'/community-services',permanent:true},
+    {source:'/programs/seniors',destination:'/community-services/seniors',permanent:true},
+    {source:'/programs/code-ai-club',destination:'/community-services/code-ai-club',permanent:true},
+    {source:'/solutions',destination:'/technical-implementation',permanent:true},
+    {source:'/programs/professionals',destination:'/technical-implementation',permanent:true},
+    {source:'/programs/new-canadians',destination:'/community-services',permanent:true},
+    {source:'/programs/:path*',destination:'/community-services',permanent:false},
+    {source:'/fr/programs',destination:'/fr/community-services',permanent:true,locale:false},
+    {source:'/fr/programs/seniors',destination:'/fr/community-services/seniors',permanent:true,locale:false},
+    {source:'/fr/programs/code-ai-club',destination:'/fr/community-services/code-ai-club',permanent:true,locale:false},
+  ]; },
   headers: async () => [
     {
       source: '/(.*)',
