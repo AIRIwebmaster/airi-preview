@@ -228,17 +228,17 @@ export function Header() {
           )}
 
           <button
-            className="flex items-center gap-2 rounded-full bg-accent-50 px-4 py-2 transition-colors hover:bg-accent-100 2xl:hidden"
+            className="flex min-h-12 items-center gap-3 rounded-xl border border-primary/20 bg-gradient-to-r from-primary via-primary-600 to-primary-700 px-5 py-3 text-white shadow-lg shadow-primary/20 transition-all hover:from-primary-600 hover:to-primary-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary 2xl:hidden"
             onClick={() => { setMobileOpen(!mobileOpen); setActiveDropdown(null); setActiveMobileSubDropdown(null); }}
             aria-label={mobileOpen ? t('close') : t('menu')}
           >
-            <span className="text-[13px] font-semibold text-foreground">
+            <span className="text-[14px] font-bold tracking-wide text-white">
               {mobileOpen ? t('close') : t('menu')}
             </span>
             {mobileOpen ? (
-              <X className="h-4 w-4" strokeWidth={2.5} />
+              <X className="h-5 w-5 text-lime" strokeWidth={2.5} />
             ) : (
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <svg className="h-5 w-5 text-lime" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" d="M4 6h7.2" />
                 <path strokeLinecap="round" d="M4 12h16" />
                 <path strokeLinecap="round" d="M4 18h13.6" />
